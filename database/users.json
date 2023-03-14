@@ -3,5 +3,10 @@
     "id": "024a4396-040d-4156-bc4a-87e71523b18a",
     "username": "test",
     "password": "$2b$10$3X6doKOiukg/igmP9WYMLOSRgfQGeZYPvnShew.qrNmxtrf6GgBPe"
+  },
+  {
+    "id": "e140e5e4-622e-48fc-a59f-47f8023416a0",
+    "username": "test2",
+    "password": "$2b$10$OTkJslXYKUiBFTyLsEIR.OIpT/wbrr9aGqycMKw9Qv98FgJihxZNi"
   }
 ]
