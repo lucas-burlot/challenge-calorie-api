@@ -4,6 +4,7 @@
   "description": "API du challenge Stack pour le projet calculateur de calorie",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lucas, Martin, Delphine",
