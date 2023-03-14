@@ -1,0 +1,58 @@
+[
+  {
+    "id": "5398e6d9-b53f-4cdd-8ab9-73b435ba0d21",
+    "name": "Tarte aux fraises 1",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque natus aperiam sit ut modi voluptatem. Nulla at architecto nam similique, repellendus repudiandae, delectus odit placeat ea facere magnam quo dolore!",
+    "steps": [
+      "Lorem ipsum dolor sit amet consectetur",
+      "Lorem ipsum dolor sit amet consectetur",
+      "Lorem ipsum dolor sit amet consectetur"
+    ],
+    "ingredients": [
+      {
+        "id": 1,
+        "quantity": 100
+      },
+      {
+        "id": 2,
+        "quantity": 100
+      },
+      {
+        "id": 6,
+        "quantity": 100
+      }
+    ]
+  },
+  {
+    "id": "ca018c87-6ce4-4e52-9375-09bce4ffe9b8",
+    "name": "Tarte aux fraises 2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque natus aperiam sit ut modi voluptatem. Nulla at architecto nam similique, repellendus repudiandae, delectus odit placeat ea facere magnam quo dolore!",
+    "steps": [
+      "Lorem ipsum dolor sit amet consectetur",
+      "Lorem ipsum dolor sit amet consectetur",
+      "Lorem ipsum dolor sit amet consectetur"
+    ],
+    "ingredients": [
+      {
+        "id": 12,
+        "quantity": 100
+      }
+    ]
+  },
+  {
+    "id": "0aa71958-361a-4cdd-a983-710c7dda328b",
+    "name": "Tarte aux fraises 3",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque natus aperiam sit ut modi voluptatem. Nulla at architecto nam similique, repellendus repudiandae, delectus odit placeat ea facere magnam quo dolore!",
+    "steps": [
+      "Lorem ipsum dolor sit amet consectetur",
+      "Lorem ipsum dolor sit amet consectetur",
+      "Lorem ipsum dolor sit amet consectetur"
+    ],
+    "ingredients": [
+      {
+        "id": 12,
+        "quantity": 100
+      }
+    ]
+  }
+]

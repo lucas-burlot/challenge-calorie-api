@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "Pomme",
+    "unit": "g",
+    "calories": 52,
+    "carbohydrates": 14.0,
+    "proteins": 0.3,
+    "lipids": 0.2
+  },
+  {
+    "id": 2,
+    "name": "Banane",
+    "unit": "g",
+    "calories": 89,
+    "carbohydrates": 23.0,
+    "proteins": 1.1,
+    "lipids": 0.3
+  },
+  {
+    "id": 3,
+    "name": "Brocoli",
+    "unit": "g",
+    "calories": 34,
+    "carbohydrates": 6.6,
+    "proteins": 2.8,
+    "lipids": 0.4
+  },
+  {
+    "id": 4,
+    "name": "Carotte",
+    "unit": "g",
+    "calories": 41,
+    "carbohydrates": 10.0,
+    "proteins": 0.9,
+    "lipids": 0.2
+  },
+  {
+    "id": 5,
+    "name": "Oignon",
+    "unit": "g",
+    "calories": 40,
+    "carbohydrates": 9.3,
+    "proteins": 1.1,
+    "lipids": 0.1
+  },
+  {
+    "id": 6,
+    "name": "Lait",
+    "unit": "ml",
+    "calories": 42,
+    "carbohydrates": 4.7,
+    "proteins": 3.4,
+    "lipids": 1.5
+  },
+  {
+    "id": 7,
+    "name": "Framboises",
+    "unit": "g",
+    "calories": 52,
+    "carbohydrates": 11.9,
+    "proteins": 1.2,
+    "lipids": 0.7
+  },
+  {
+    "id": 8,
+    "name": "Sauce tomate",
+    "unit": "g",
+    "calories": 32,
+    "carbohydrates": 5.5,
+    "proteins": 1.2,
+    "lipids": 0.4
+  },
+  {
+    "id": 9,
+    "name": "Riz",
+    "unit": "g",
+    "calories": 130,
+    "carbohydrates": 28.0,
+    "proteins": 2.7,
+    "lipids": 0.3
+  },
+  {
+    "id": 10,
+    "name": "Poulet",
+    "unit": "g",
+    "calories": 165,
+    "carbohydrates": 0.0,
+    "proteins": 31.0,
+    "lipids": 3.6
+  },
+  {
+    "id": 11,
+    "name": "Avocat",
+    "unit": "g",
+    "calories": 160,
+    "carbohydrates": 8.5,
+    "proteins": 2.0,
+    "lipids": 14.7
+  }
+]
