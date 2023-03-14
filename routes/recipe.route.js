@@ -16,6 +16,8 @@ router.put('/recipes/:id', recipeController.updateRecipe);
 // Delete recipe
 router.delete('/recipes/:id', recipeController.deleteRecipeById);
 // Analyze recipe
-router.get('/recipes/:id/analyse', recipeController.analyse);
+router.get('/recipes/:id/analyse', recipeController.analyseRecipe);
+// random recipe
+router.post('/recipes/random', recipeController.randomRecipe);
 
 module.exports = router;

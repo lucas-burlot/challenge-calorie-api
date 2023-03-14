@@ -2,6 +2,9 @@
 const Recipe = require('../models/recipe.model');
 const Ingredient = require('../models/ingredient.model');
 const http_status = require('../http-status-codes.js');
+const faker = require('@faker-js/faker');
+const {v4: uuidv4} = require("uuid");
+
 async function createRecipe(req, res) {
     try {
         const {name, description, steps, ingredients} = req.body;
@@ -102,7 +105,7 @@ async function updateRecipe(req, res){
     }
 }
 
-async function analyse(req, res){
+async function analyseRecipe(req, res){
     if (!req.params.id) {
         return res.status(http_status.global_status.BAD_REQUEST.status).json({message: http_status.general_messages.RECIPE_ID_REQUIRED});
     }
@@ -134,5 +137,31 @@ async function analyse(req, res){
     );
 }
 
-module.exports = { createRecipe, getRecipeById, deleteRecipeById, getAllRecipes, updateRecipe, analyse }
+// create a random recipe
+async function randomRecipe(req, res){
+    const ingredients = Ingredient.find();
+    const randomIngredients = [];
+    const randomNumberOfIngredients = Math.floor(Math.random() * ingredients.length) + 1;
+    for(let i = 0; i < randomNumberOfIngredients; i++){
+        const randomIndex = Math.floor(Math.random() * ingredients.length);
+        randomIngredients.push(ingredients[randomIndex]);
+    }
+    const randomRecipe = {
+        id: uuidv4(),
+        user_id: req.user.id,
+        name: faker.faker.lorem.word() + " " + faker.faker.lorem.word(),
+        description: faker.faker.lorem.paragraph(),
+        steps: [faker.faker.lorem.paragraph(), faker.faker.lorem.paragraph(), faker.faker.lorem.paragraph()],
+        ingredients: randomIngredients.map(ingredient => {
+            return {
+                id: ingredient.id,
+                quantity: Math.floor(Math.random() * 100)
+            }
+        })
+    }
+    Recipe.create(randomRecipe);
+    res.status(http_status.global_status.SUCCESS.status).json(randomRecipe);
+}
+
+module.exports = { createRecipe, getRecipeById, deleteRecipeById, getAllRecipes, updateRecipe, analyseRecipe, randomRecipe }
 
