@@ -46,6 +46,8 @@ L'API utilise 3 modèles : Recipe, Ingredient et User.
 | ingredients   | liste des ingrédients utilisés    |
 | steps  | liste des instructions            |
 
+##### Ingredient
+
 | Modèle |  Descripton                                  |
 |------------------|------------------------------------|
 | id               | identifiant unique de l'ingrédient |
@@ -55,6 +57,8 @@ L'API utilise 3 modèles : Recipe, Ingredient et User.
 | proteins         | nombre de protéines pour 100g      |
 | carbohydrates    | nombre de glucides pour 100g       |
 | lipids           | nombre de lipides pour 100g        |
+
+##### User
 
 | Modèle |   Descripton                         |
 |-------------|----------------------------|
