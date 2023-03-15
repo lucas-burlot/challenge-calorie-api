@@ -45,7 +45,7 @@ const general_messages = {
     // DELETED
     RECIPE_DELETED: 'Recipe deleted',
     // NOT_FOUND
-    AUTHORIZATION_NOT_FOUND: 'Authorization header not found',
+    AUTHORIZATION_NOT_FOUND: 'Invalid authorization token',
     RECIPE_NOT_FOUND: 'Recipe not found',
     USER_NOT_FOUND: 'User not found',
     // INVALID
