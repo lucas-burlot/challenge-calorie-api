@@ -106,61 +106,71 @@ async function updateRecipe(req, res){
 }
 
 async function analyseRecipe(req, res){
-    if (!req.params.id) {
-        return res.status(http_status.global_status.BAD_REQUEST.status).json({message: http_status.general_messages.RECIPE_ID_REQUIRED});
-    }
-    const recipe = Recipe.find({ id: req.params.id })[0];
-    if (!recipe) {
-        return res.status(http_status.global_status.NOT_FOUND.status).json({ message: http_status.general_messages.RECIPE_NOT_FOUND });
-    }
-    if(recipe.user_id !== req.user.id) {
-        return res.status(http_status.global_status.UNAUTHORIZED.status).json({message: http_status.global_status.UNAUTHORIZED.message});
-    }
-    const { ingredients } = recipe;
-    const ingredientsList = Ingredient.find();
-    let [totalCalories, totalProteins, totalCarbohydrates, totalLipids] = [0, 0, 0, 0];
-    for(const recipe_ingredient of ingredients) {
-        const ingredient = ingredientsList.find(ingredient => ingredient.id === recipe_ingredient.id);
-        if(ingredient){
-            totalCalories += (recipe_ingredient.quantity * ingredient.calories) / 100;
-            totalProteins += (recipe_ingredient.quantity * ingredient.proteins) / 100;
-            totalCarbohydrates += (recipe_ingredient.quantity * ingredient.carbohydrates) / 100;
-            totalLipids += (recipe_ingredient.quantity * ingredient.lipids) / 100;
+    try{
+        if (!req.params.id) {
+            return res.status(http_status.global_status.BAD_REQUEST.status).json({message: http_status.general_messages.RECIPE_ID_REQUIRED});
         }
-    }
-    res.status(http_status.global_status.SUCCESS.status).json(
-        {
-            message: http_status.global_status.SUCCESS.message,
-            total_calories: totalCalories, total_proteins: totalProteins,
-            total_carbohydrates: totalCarbohydrates, total_lipids: totalLipids
+        const recipe = Recipe.find({ id: req.params.id })[0];
+        if (!recipe) {
+            return res.status(http_status.global_status.NOT_FOUND.status).json({ message: http_status.general_messages.RECIPE_NOT_FOUND });
         }
-    );
+        if(recipe.user_id !== req.user.id) {
+            return res.status(http_status.global_status.UNAUTHORIZED.status).json({message: http_status.global_status.UNAUTHORIZED.message});
+        }
+        const { ingredients } = recipe;
+        const ingredientsList = Ingredient.find();
+        let [totalCalories, totalProteins, totalCarbohydrates, totalLipids] = [0, 0, 0, 0];
+        for(const recipe_ingredient of ingredients) {
+            const ingredient = ingredientsList.find(ingredient => ingredient.id === recipe_ingredient.id);
+            if(ingredient){
+                totalCalories += (recipe_ingredient.quantity * ingredient.calories) / 100;
+                totalProteins += (recipe_ingredient.quantity * ingredient.proteins) / 100;
+                totalCarbohydrates += (recipe_ingredient.quantity * ingredient.carbohydrates) / 100;
+                totalLipids += (recipe_ingredient.quantity * ingredient.lipids) / 100;
+            }
+        }
+        res.status(http_status.global_status.SUCCESS.status).json(
+            {
+                message: http_status.global_status.SUCCESS.message,
+                total_calories: totalCalories, total_proteins: totalProteins,
+                total_carbohydrates: totalCarbohydrates, total_lipids: totalLipids
+            }
+        );
+    }catch (error) {
+        console.error(error);
+        res.status(http_status.global_status.SERVER_ERROR.status).json({ message: http_status.global_status.SERVER_ERROR.message });
+    }
 }
 
 // create a random recipe
 async function randomRecipe(req, res){
-    const ingredients = Ingredient.find();
-    const randomIngredients = [];
-    const randomNumberOfIngredients = Math.floor(Math.random() * ingredients.length) + 1;
-    for(let i = 0; i < randomNumberOfIngredients; i++){
-        const randomIndex = Math.floor(Math.random() * ingredients.length);
-        randomIngredients.push(ingredients[randomIndex]);
+    try{
+        const ingredients = Ingredient.find();
+        const randomIngredients = [];
+        const randomNumberOfIngredients = Math.floor(Math.random() * ingredients.length) + 1;
+        for(let i = 0; i < randomNumberOfIngredients; i++){
+            const randomIndex = Math.floor(Math.random() * ingredients.length);
+            randomIngredients.push(ingredients[randomIndex]);
+        }
+        const randomRecipe = {
+            id: uuidv4(),
+            user_id: req.user.id,
+            name: faker.faker.lorem.word() + " " + faker.faker.lorem.word(),
+            description: faker.faker.lorem.paragraph(),
+            steps: [faker.faker.lorem.paragraph(), faker.faker.lorem.paragraph(), faker.faker.lorem.paragraph()],
+            ingredients: randomIngredients.map(ingredient => {
+                return {
+                    id: ingredient.id,
+                    quantity: Math.floor(Math.random() * 100)
+                }
+            })
+        }
+        Recipe.create(randomRecipe);
+        res.status(http_status.global_status.SUCCESS.status).json(randomRecipe);
+    }catch (error) {
+        console.error(error);
+        res.status(http_status.global_status.SERVER_ERROR.status).json({ message: http_status.global_status.SERVER_ERROR.message });
     }
-    const randomRecipe = {
-        id: uuidv4(),
-        user_id: req.user.id,
-        name: faker.faker.lorem.word() + " " + faker.faker.lorem.word(),
-        description: faker.faker.lorem.paragraph(),
-        steps: [faker.faker.lorem.paragraph(), faker.faker.lorem.paragraph(), faker.faker.lorem.paragraph()],
-        ingredients: randomIngredients.map(ingredient => {
-            return {
-                id: ingredient.id,
-                quantity: Math.floor(Math.random() * 100)
-            }
-        })
-    }
-    Recipe.create(randomRecipe);
-    res.status(http_status.global_status.SUCCESS.status).json(randomRecipe);
 }
 
 module.exports = { createRecipe, getRecipeById, deleteRecipeById, getAllRecipes, updateRecipe, analyseRecipe, randomRecipe }
