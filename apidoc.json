@@ -4,11 +4,10 @@
   "description": "Une application qui permet de calculer les calories d'une recette.",
   "title": "Documentation de l'API",
   "url" : "https://challenge-calories-api.herokuapp.com",
-  "sampleUrl": "https://challenge-calories-api.herokuapp.com",
   "template": {
     "forceLanguage": "fr",
-    "withCompare": true,
-    "withGenerator": true
+    "withCompare": false,
+    "withGenerator": false
   },
   "excludeFiles": [
     "node_modules/"
