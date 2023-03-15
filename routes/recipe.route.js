@@ -7,6 +7,8 @@ const authMiddleware = require("../middleware/authMiddleware");
 router.use(authMiddleware);
 // Get all recipes
 router.get('/recipes', recipeController.getAllRecipes);
+// random recipe
+router.get('/recipes/random', recipeController.randomRecipe);
 // Get recipe by ID
 router.get('/recipes/:id', recipeController.getRecipeById);
 // Create recipe
@@ -17,7 +19,5 @@ router.put('/recipes/:id', recipeController.updateRecipe);
 router.delete('/recipes/:id', recipeController.deleteRecipeById);
 // Analyze recipe
 router.get('/recipes/:id/analyse', recipeController.analyseRecipe);
-// random recipe
-router.post('/recipes/random', recipeController.randomRecipe);
 
 module.exports = router;
