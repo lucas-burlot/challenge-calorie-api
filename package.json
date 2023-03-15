@@ -20,6 +20,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "apidoc": "^0.54.0",
     "mocha": "^10.2.0"
   }
 }

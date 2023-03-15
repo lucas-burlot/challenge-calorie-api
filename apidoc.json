@@ -1,0 +1,20 @@
+{
+  "name": "Mon application",
+  "version": "1.0.0",
+  "description": "Une description de mon application",
+  "title": "Documentation de l'API",
+  "url" : "https://challenge-calories-api.herokuapp.com/",
+  "sampleUrl": "https://challenge-calories-api.herokuapp.com/",
+  "template": {
+    "forceLanguage": "fr",
+    "withCompare": true,
+    "withGenerator": true
+  },
+  "excludeFiles": [
+    "node_modules/"
+  ],
+  "header": {
+    "title": "Calories - API Documentation",
+    "filename": "header.md"
+  }
+}
