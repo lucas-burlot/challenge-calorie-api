@@ -12,7 +12,7 @@ async function createRecipe(req, res) {
             return res.status(http_status.global_status.BAD_REQUEST.status).json({message: http_status.general_messages.RECIPE_FIELDS_REQUIRED});
         }
 
-        const recipeExist = Recipe.find({name});
+        const recipeExist = Recipe.find({name: name, user_id: req.user.id});
         if (recipeExist.length > 0) {
             return res.status(http_status.global_status.BAD_REQUEST.status).json({message: http_status.general_messages.RECIPE_ALREADY_EXIST});
         }
