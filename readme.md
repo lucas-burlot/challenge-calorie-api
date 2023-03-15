@@ -37,7 +37,7 @@ L'API utilise 3 modèles : Recipe, Ingredient et User.
 
 ##### Recipe
 
-| Modèle Recipe |                                  |
+| Modèle  | Descripton                                 |
 |---------------|----------------------------------|
 | id            | identifiant unique de la recette |
 | user_id       | identifiant de l'utilisateur     |
@@ -46,17 +46,17 @@ L'API utilise 3 modèles : Recipe, Ingredient et User.
 | ingredients   | liste des ingrédients utilisés    |
 | steps  | liste des instructions            |
 
-| Modèle Ingredient |                                    |
-|-------------------|------------------------------------|
-| id                | identifiant unique de l'ingrédient |
-| name              | nom de l'ingrédient                |
-| units             | unité (en g ou ml)                 |
-| calories          | nombre de calories pour 100g       |
-| proteins          | nombre de protéines pour 100g      |
-| carbohydrates     | nombre de glucides pour 100g       |
-| lipids            | nombre de lipides pour 100g        |
+| Modèle |  Descripton                                  |
+|------------------|------------------------------------|
+| id               | identifiant unique de l'ingrédient |
+| name             | nom de l'ingrédient                |
+| units            | unité (en g ou ml)                 |
+| calories         | nombre de calories pour 100g       |
+| proteins         | nombre de protéines pour 100g      |
+| carbohydrates    | nombre de glucides pour 100g       |
+| lipids           | nombre de lipides pour 100g        |
 
-| Modèle User |                            |
+| Modèle |   Descripton                         |
 |-------------|----------------------------|
 | id          | identifiant unique de l'utilisateur |
 | username    | nom d'utilisateur                 |
