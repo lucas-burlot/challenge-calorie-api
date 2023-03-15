@@ -1,1 +1,40 @@
-[{"id":"13e3c67f-a010-405b-88f7-9509b469eaec","user_id":"e140e5e4-622e-48fc-a59f-47f8023416a0","name":"Tarte aux fraises","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque natus aperiam sit ut modi voluptatem. Nulla at architecto nam similique, repellendus repudiandae, delectus odit placeat ea facere magnam quo dolore!","steps":["Lorem ipsum dolor sit amet consectetur","Lorem ipsum dolor sit amet consectetur","Lorem ipsum dolor sit amet consectetur"],"ingredients":[{"id":1,"quantity":200}]},{"id":"7ee78f3a-4140-438d-a444-a2c6ad630230","user_id":"024a4396-040d-4156-bc4a-87e71523b18a","name":"Tarte aux fraises","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque natus aperiam sit ut modi voluptatem. Nulla at architecto nam similique, repellendus repudiandae, delectus odit placeat ea facere magnam quo dolore!","steps":["Lorem ipsum dolor sit amet consectetur","Lorem ipsum dolor sit amet consectetur","Lorem ipsum dolor sit amet consectetur"],"ingredients":[{"id":1,"quantity":200}]}]
+[
+  {
+    "id": "13e3c67f-a010-405b-88f7-9509b469Leaec",
+    "user_id": "e140e5e4-622e-48fc-a59f-47f8023416a0",
+    "name": "Tarte aux fraises",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque natus aperiam sit ut modi voluptatem. Nulla at architecto nam similique, repellendus repudiandae, delectus odit placeat ea facere magnam quo dolore!",
+    "steps": [
+      "Lorem ipsum dolor sit amet consectetur",
+      "Lorem ipsum dolor sit amet consectetur",
+      "Lorem ipsum dolor sit amet consectetur"
+    ],
+    "ingredients": [
+      {
+        "id": 1,
+        "quantity": 200
+      }
+    ]
+  },
+  {
+    "id": "7ee78f3a-4140-438d-a444-a2c6ad630230",
+    "user_id": "024a4396-040d-4156-bc4a-87e71523b18a",
+    "name": "Tarte aux fraises 2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque natus aperiam sit ut modi voluptatem. Nulla at architecto nam similique, repellendus repudiandae, delectus odit placeat ea facere magnam quo dolore!",
+    "steps": [
+      "Lorem ipsum dolor sit amet consectetur",
+      "Lorem ipsum dolor sit amet consectetur",
+      "Lorem ipsum dolor sit amet consectetur"
+    ],
+    "ingredients": [
+      {
+        "id": 1,
+        "quantity": 200
+      },
+      {
+        "id": 2,
+        "quantity": 100
+      }
+    ]
+  }
+]

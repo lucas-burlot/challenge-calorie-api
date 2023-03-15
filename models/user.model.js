@@ -19,8 +19,8 @@ class User {
         userDatabase.create(user);
     }
 
-    static update(user) {
-        userDatabase.update(user.id, user);
+    static update(id, user) {
+        userDatabase.update(id, user);
     }
 
     static delete(id) {

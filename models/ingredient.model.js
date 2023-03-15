@@ -21,8 +21,8 @@ class Ingredient {
         ingredientDatabase.create(user);
     }
 
-    static update(user) {
-        ingredientDatabase.update(user.id, user);
+    static update(id, user) {
+        ingredientDatabase.update(id, user);
     }
 
     static delete(id) {

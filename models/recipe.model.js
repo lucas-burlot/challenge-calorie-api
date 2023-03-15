@@ -19,8 +19,8 @@ class Recipe {
         recipeDatabase.create(recipe);
     }
 
-    static update(recipe) {
-        recipeDatabase.update(recipe.id, recipe);
+    static update(id, recipe) {
+        recipeDatabase.update(id, recipe);
     }
 
     static delete(id) {
