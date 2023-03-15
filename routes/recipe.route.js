@@ -14,9 +14,12 @@ router.use(authMiddleware);
  *
  * @apiHeader {String} Authorization Bearer token required.
  *
+ * @apiSuccess {String} userRecipes Recipes list of the user.
+ *
  * @apiSuccessExample {json} Success Response:
- *     HTTP/1.1 200 OK
- *     [
+ *  HTTP/1.1 200 OK
+ *  "userRecipes" :
+ *   [
  *         {
  *             "id": "2b00a5a-002f-2752-03c1-0a77f1c41c2e",
  *             "user_id": "1b04a5a0-002f-4752-00c2-0y77f1c11c2e",
@@ -62,13 +65,13 @@ router.use(authMiddleware);
  *         }
  *      ]
  *
+ *  @apiError {String} message Error message.
  *  @apiErrorExample {json} Error Response:
  *     HTTP/1.1 401 Unauthorized
  *     {
- *         "error": "Invalid authorization token."
+ *         "message": "Invalid authorization token."
  *     }
  */
-
 router.get('/recipes', recipeController.getAllRecipes);
 // random recipe
 router.get('/recipes/random', recipeController.randomRecipe);

@@ -11,6 +11,8 @@ const ingredientController = require('../controllers/ingredient.controller');
  *
  * @apiHeader {String} Authorization Bearer token required.
  *
+ * @apiSuccess {String} ingredients Ingredients list.
+ *
  * @apiSuccessExample {json} Success Response:
  *     HTTP/1.1 200 OK
  *     "ingredients" : [
@@ -35,11 +37,11 @@ const ingredientController = require('../controllers/ingredient.controller');
  *             "lipids": 100
  *         }
  *     ]
- *
+ * @apiError {String} message Error message.
  * @apiErrorExample {json} Error Response:
  *     HTTP/1.1 401 Unauthorized
  *     {
- *         "error": "Invalid authorization token."
+ *         "message": "Invalid authorization token."
  *     }
  */
 router.get('/ingredients', ingredientController.getAllIngredient);
