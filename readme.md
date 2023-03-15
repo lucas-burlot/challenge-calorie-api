@@ -32,6 +32,36 @@ L'API propose les endpoints suivants :
 | `POST /users/register`    | `userController`     | `User`       | Crée un nouvel utilisateur                                    |
 | `POST /users/login`       | `userController`     | `User`       | Connecte un utilisateur en générant un JWT dans le header     |
 
+### Modèle
+L'API utilise 3 modèles : Recipe, Ingredient et User.
+
+##### Recipe
+
+| Modèle Recipe |                                  |
+|---------------|----------------------------------|
+| id            | identifiant unique de la recette |
+| user_id       | identifiant de l'utilisateur     |
+| name          | nom de la recette                 |
+| description   | description de la recette         |
+| ingredients   | liste des ingrédients utilisés    |
+| steps  | liste des instructions            |
+
+| Modèle Ingredient |                                 |
+|-------------------|---------------------------------|
+| id                | identifiant unique de l'ingrédient|
+| name              | nom de l'ingrédient               |
+| calories          | nombre de calories pour 100g      |
+| proteins          | nombre de protéines pour 100g     |
+| carbohydrates     | nombre de glucides pour 100g      |
+| lipids            | nombre de lipides pour 100g       |
+
+| Modèle User |                            |
+|-------------|----------------------------|
+| id          | identifiant unique de l'utilisateur |
+| username    | nom d'utilisateur                 |
+| password    | mot de passe hashé de l'utilisateur |
+
+
 ### JWT
 
 Un JSON Web Token (JWT) est utilisé pour les endpoints nécessitant une authentification. Le token doit être placé dans le header de la requête sous la clé `Authorization`. La valeur du header doit être `Bearer [token]` où `token` est le JWT généré lors de la connexion.
