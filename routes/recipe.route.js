@@ -183,6 +183,7 @@ router.get('/recipes/:id', recipeController.getRecipeById);
  *     HTTP/1.1 200 OK
  *     {
  *       "message": "Recipe created"
+ *       "recipe_id": "2b00a5a-002f-2752-03c1-0a77f1c41c2e"
  *     }
  *
  * @apiErrorExample Unauthorized

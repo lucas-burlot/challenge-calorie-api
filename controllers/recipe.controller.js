@@ -20,7 +20,7 @@ async function createRecipe(req, res) {
         const user_id = req.user.id;
         const recipe = new Recipe(user_id, name, description, steps, ingredients);
         Recipe.create(recipe);
-        res.status(http_status.global_status.CREATED.status).json({message: http_status.general_messages.RECIPE_CREATED});
+        res.status(http_status.global_status.CREATED.status).json({message: http_status.general_messages.RECIPE_CREATED, recipe_id: recipe.id});
     } catch (error) {
         console.error(error);
         res.status(http_status.global_status.SERVER_ERROR.status).json({message: http_status.global_status.SERVER_ERROR.message});
