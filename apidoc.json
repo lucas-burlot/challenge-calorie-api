@@ -1,10 +1,10 @@
 {
-  "name": "Mon application",
+  "name": "Calories Calculateur - API Documentation",
   "version": "1.0.0",
-  "description": "Une description de mon application",
+  "description": "Une application qui permet de calculer les calories d'une recette.",
   "title": "Documentation de l'API",
-  "url" : "https://challenge-calories-api.herokuapp.com/",
-  "sampleUrl": "https://challenge-calories-api.herokuapp.com/",
+  "url" : "https://challenge-calories-api.herokuapp.com",
+  "sampleUrl": "https://challenge-calories-api.herokuapp.com",
   "template": {
     "forceLanguage": "fr",
     "withCompare": true,
@@ -14,7 +14,6 @@
     "node_modules/"
   ],
   "header": {
-    "title": "Calories - API Documentation",
-    "filename": "header.md"
+    "title": "Calories - API Documentation"
   }
 }

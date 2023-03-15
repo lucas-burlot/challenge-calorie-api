@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const apidoc = require('apidoc');
 require('dotenv').config();
 const app = express();
 const recipeRoute = require('./routes/recipe.route.js');
