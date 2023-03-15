@@ -1,7 +1,7 @@
 // models/user.js
 const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcrypt');
-const Database = require("../database");
+const Database = require("./database.model.js");
 const userDatabase = new Database("database/users.json");
 
 class User {

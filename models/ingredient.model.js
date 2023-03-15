@@ -1,5 +1,5 @@
 // models/ingredient.js
-const Database = require("../database");
+const Database = require("./database.model.js");
 const ingredientDatabase = new Database("database/ingredients.json");
 const {v4: uuidv4} = require("uuid");
 class Ingredient {
