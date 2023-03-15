@@ -178,6 +178,7 @@ router.get('/recipes/:id', recipeController.getRecipeById);
  * @apiParam {String[]} instructions Directions for cooking the recipe.
  *
  * @apiSuccess {String} message Success message.
+ * @apiSuccess {String} recipe_id ID of the recipe created.
  *
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 200 OK
