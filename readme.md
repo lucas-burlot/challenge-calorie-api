@@ -10,9 +10,8 @@ Nous avons mis en place un système de test unitaire avec la librairie `mocha`
 
 1. Cloner le projet à partir du repo GitHub : `git clone https://github.com/lucas-burlot/challenge-calorie-api.git`
 2. Installer les dépendances en utilisant la commande : `npm install`
-3. Créer un fichier `.env` à la racine du projet en se basant sur le fichier `.env.example`. Remplir les valeurs avec les paramètres désirés.
-4. Lancer l'application avec la commande : `npm start`
-5. Pour lancer les tests unitaire : `npm run test`
+3. Lancer l'application avec la commande : `npm start`
+4. Pour lancer les tests unitaire : `npm run test`
 
 ## Utilisation
 
