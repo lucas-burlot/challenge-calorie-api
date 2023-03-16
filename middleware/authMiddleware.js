@@ -15,6 +15,9 @@ function authMiddleware(req, res, next) {
         req.user = jwt.verify(token, process.env.SECRET_JWT_SEED);
         next();
     } catch (err) {
+        if (err.name === 'TokenExpiredError') { // Vérifiez si le JWT a expiré
+            return res.status(http_status.global_status.UNAUTHORIZED.status).json({ error: http_status.global_status.UNAUTHORIZED.message + ' - JWT expired' });
+        }
         return res.status(http_status.global_status.UNAUTHORIZED.status).json({ error: http_status.global_status.UNAUTHORIZED.message });
     }
 }

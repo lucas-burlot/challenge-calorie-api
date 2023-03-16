@@ -42,7 +42,7 @@ async function login(req, res) {
                 .status(http_status.global_status.BAD_REQUEST.status)
                 .json({ message: http_status.general_messages.INVALID_CREDENTIALS });
         }
-        const token = jwt.sign({ id: user.id , username }, process.env.SECRET_JWT_SEED);
+        const token = jwt.sign({ id: user.id , username }, process.env.SECRET_JWT_SEED, { expiresIn: '1m' });
         res.status(http_status.global_status.SUCCESS.status).json({ message:http_status.global_status.SUCCESS.message, token: token });
     } catch (error) {
         console.error(error);
